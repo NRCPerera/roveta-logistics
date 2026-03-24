@@ -1,0 +1,129 @@
+/* ==========================================
+   TERMS PAGE STYLES
+   ========================================== */
+
+.terms-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    padding: 48px;
+}
+
+.terms-last-updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-bottom: 40px;
+}
+
+.terms-last-updated i {
+    color: var(--primary);
+}
+
+.terms-content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.terms-block h2 {
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--gray-100);
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+.terms-block p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.terms-block p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-block ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.terms-block ul li {
+    position: relative;
+    padding-left: 24px;
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.terms-block ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+/* Terms Contact Info */
+.terms-contact {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-top: 12px;
+}
+
+.terms-contact p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: var(--gray-700);
+}
+
+.terms-contact p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-contact p i {
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+}
+
+.terms-contact a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.terms-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive - Terms */
+@media (max-width: 768px) {
+    .terms-wrapper {
+        padding: 24px;
+    }
+
+    .terms-block h2 {
+        font-size: 1.1rem;
+    }
+}

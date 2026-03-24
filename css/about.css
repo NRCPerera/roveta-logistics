@@ -1,0 +1,263 @@
+/* ==========================================
+   ABOUT PAGE STYLES
+   ========================================== */
+
+/* About Story */
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-story-content .section-tag {
+    margin-bottom: 16px;
+}
+
+.about-story-content h2 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 24px;
+}
+
+.about-story-content p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.about-image-card {
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.15), transparent 60%);
+}
+
+.about-image-placeholder {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-image-placeholder i {
+    font-size: 5rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.about-image-placeholder span {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+}
+
+.about-image-badge {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    z-index: 1;
+}
+
+.about-image-badge .badge-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.about-image-badge .badge-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mission, Vision, Values */
+.mvv-section {
+    background: var(--gray-50);
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mvv-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    border: 1px solid var(--gray-200);
+    text-align: center;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.mvv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.mvv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+
+.mvv-card:hover::before {
+    transform: scaleX(1);
+}
+
+.mvv-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(220, 38, 38, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin: 0 auto 24px;
+    transition: all var(--transition-normal);
+}
+
+.mvv-card:hover .mvv-icon {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.mvv-card h3 {
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-bottom: 16px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+.mvv-card p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.values-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+.values-list li i {
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+/* Advantages */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.advantage-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.advantage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.advantage-number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(220, 38, 38, 0.1);
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.advantage-card h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 12px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+.advantage-card p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Responsive - About */
+@media (max-width: 1024px) {
+    .about-story-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-story-content {
+        text-align: center;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image-card {
+        min-height: 300px;
+    }
+}
